@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart-Review</title>
+</head>
+<body>
+    <form method="post">
+        <h1 style="text-align: center;">Flipkart-Review Page</h1>
+        <br>
+        <br>
+        <label for="name">Username</label>
+        <input type="text" id="name" maxlength="20" required>
+        <br>
+        <label for="Rating">give Rating</label>
+        <Select name="Rating" id="Rating" required>
+            <option value="">Choose Rating</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </Select>
+        <br>
+        <label for="Review">Give Review</label>
+        <textarea name="Review" id="Review" rows="3" cols="10" minlength="20" required></textarea>
+        <br>
+        <button type="submit">submit your Review</button>
+    </form>
+</body>
+</html>
