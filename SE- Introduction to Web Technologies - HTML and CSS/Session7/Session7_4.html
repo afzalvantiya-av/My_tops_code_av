@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 30px;
+            background: rgb(238, 234, 234);
+        }
+        .card{
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+        }
+        .card img{
+            height: 150px;
+            width: 150px;
+            object-fit: contain;
+
+        }
+        .name{
+            font-size: 18px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .grid{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .grid{
+                grid-template-columns: 1fr
+            }
+        }   
+    </style>
+</head>
+<body>
+<div class="grid">
+    <div class="card">
+        <img src="iphone16.jpg" alt="Smartphone">
+        <div class="name">Smartphone</div>
+    </div>
+    <div class="card">
+        <img src="lappy.webp" alt="Laptop">
+        <div class="name">Laptop</div>
+    </div>
+    <div class="card">
+        <img src="headphone.webp" alt="Headphones">
+        <div class="name">Headphones</div>
+    </div>
+    <div class="card">
+        <img src="smartwatch.webp" alt="Smart Watch">
+        <div class="name">Smart Watch</div>
+    </div>
+    <div class="card">
+        <img src="Waching Machine.webp" alt="Waching Machine">
+        <div class="name">Waching Machine</div>
+    </div>
+    <div class="card">
+        <img src="shoes.jpeg" alt="Shoes">
+        <div class="name">Shoes</div>
+    </div>
+</div>
+</body>
+</html>

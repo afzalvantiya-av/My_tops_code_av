@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <style>
+        .product{
+            width: 280px;
+            border-radius: 5px;
+            background-color: rgb(154, 193, 193);
+            margin: auto;
+            padding: 15px;
+        }
+        .product img{
+            height: 250px;
+            width: 100%;
+            object-fit: contain;
+        }
+        .product span{
+            /* display: inline-block; */
+            background-color: rgb(8, 167, 8);
+            border-radius: 5px;
+            color: white;
+            padding: 5px;
+            
+        }
+        .price{
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        .Ratings{
+            color: darkgreen;
+            
+        }
+        .product button{
+            background-color: blue;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            color: white;
+            font-size: 15px;
+        }
+        .product button:hover{
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="product">
+        <img src="iphone16.jpg" alt="iphone16 128GB">
+        <h2>Iphone 16 128GB</h2>
+        <span>4.5 ★</span>
+        <p class="price">₹79,999/-</p>
+        <p class="Ratings">20% off</p>
+        <button>Buy Now</button>
+    </div>
+</body>
+</html>

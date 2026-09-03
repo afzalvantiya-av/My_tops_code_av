@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Sticky navigation</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        .body {
+            background-color: lightblue;
+            color: white;
+        }
+        .navbar{
+            position: sticky;
+            top: 0;
+            background-color: gray !important;
+        }
+        .navbar-brand{
+            color: rgb(12, 195, 223) !important;
+            font-weight: bold;
+            margin-left: 40px;
+        }
+        .nav-link{
+            color: white !important;
+            margin-left: 15px;
+        }
+        .nav-link:hover{
+            color: rgb(72, 209, 233) !important;
+        }
+        .home img{
+            height: 180px;
+            width: 180px;
+            border: 5px solid green;
+            border-radius: 50%
+        }
+        section{
+            /* #vertical height (vh) full heights of the screen */
+            height: 100vh;    
+            padding: 80px 20px;
+        }
+        .home{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+        }
+        .about{
+            text-align: center;
+            justify-content: center;
+            font-size: medium;
+            background-color: rgba(128, 128, 128, 0.226);   
+        }
+        .contact{
+            background-color: rgba(128, 128, 128, 0.39);
+        }
+        .content{
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+        }
+        .btn{
+            display: inline;
+            margin: 5px;
+        }
+        </style>
+</head>
+<body class="body">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Arijit Singh</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active me-5" href="#">Contact</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+        <div>
+            <img src="https://yt3.googleusercontent.com/DcEzZrPCQRSSs47rMbdJ3UJkQUCN3X8SKf8aCnvOgd2BmPihAz-0jBGJgEVh9_P8EiSBVNyixDs=s900-c-k-c0x00ffffff-no-rj" alt="Music Artist">
+            <h1>Arijit Singh</h1>
+            <p>Singer • Songwriter • Music Artist</p>
+            <p>Creating soulful music and unforgettable melodies.</p>
+        </div>
+    </section>
+    <section class="about">
+        <div class="content">
+            <h2 class="mb-4">About Me</h2>
+            <p>
+                Arijit is an independent music artist and singer-songwriter
+                who loves creating music that connects with people.
+                His style combines pop, acoustic and modern sounds.
+            </p>
+            <p>With a passion for music and live performances, Arjun
+                continues to create new songs and connect with listeners
+                around the world.
+            </p>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="content">
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Follow me on social media or get in touch for collaborations.</p>
+            <button class="btn btn-danger social-btn">Instagram</button>
+            <button class="btn btn-success social-btn">YouTube</button>
+            <button class="btn btn-primary social-btn">Twitter</button>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+</html>
