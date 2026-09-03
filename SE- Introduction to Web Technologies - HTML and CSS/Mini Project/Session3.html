@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>SocialLinksForm</title>
+    <style>
+      .card{
+        background-color: lightblue;
+        border-radius: 10px;
+        margin: auto;
+        height: 400px;
+        max-width: 800px;
+      }
+      .card-body{
+        font-weight: bold;
+      }
+      #url{
+        width: 100%;
+        border: 2px ;
+      }
+      #btn{
+        background-color: red;
+        color: white;
+        width: 95%;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        border: none;
+        border-radius: 6px;
+        padding: 8px;
+      }
+      #btn:hover{
+        background-color: rgba(89, 187, 107, 0.756);
+        cursor: pointer;
+      }
+      .social-input {
+            width: 100%;
+            height: 50px;
+            padding: 10px 15px 10px 50px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            background-repeat: no-repeat;
+            background-position: 15px center;
+            background-size: 24px 24px;
+        }
+       /* Instagram Icon */
+        .instagram {
+            background-image: url("https://cdn-icons-png.flaticon.com/512/174/174855.png");
+        }
+        /* LinkedIn Icon */
+        .linkedin {
+            background-image: url("https://cdn-icons-png.flaticon.com/512/174/174857.png");
+        }
+        /* YouTube Icon */
+        .youtube {
+            background-image: url("https://cdn-icons-png.flaticon.com/512/1384/1384060.png");
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-center text-dark mt-5 mb-4">🔗 Add Socialmedia Links</h1>
+    <form>
+        <div class="card">
+          <div class="card-body">
+            <label  for="url ">Instagram:</label><br>
+            <input class="social-input instagram" type="url" id="url"  placeholder="https://instagram.com/yourname "  required>
+            </div>
+            <div class="card-body">
+            <label  for="url">LinkedIn:</label><br>
+            <input class="social-input linkedin" type="url" id="url"  placeholder="https://linkedin.com/in/yourname " required>
+            </div>
+            <div class="card-body">
+            <label for="url">YouTube:</label><br>
+            <input class="social-input youtube" type="url" id="url"  placeholder="https://youtube.com/@yourname" required>
+            </div>
+            <input type="submit" value="Add Social Links" id="btn">
+          </div>
+        </div>
+    </form>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+</html>

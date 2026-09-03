@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socialmedia Links</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f1f3f6;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Form */
+        .form-box {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+        .social-input {
+            width: 100%;
+            height: 50px;
+            padding: 10px 15px 10px 50px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+            background-repeat: no-repeat;
+            background-position: 15px center;
+            background-size: 24px;
+        }
+        .social-input:focus {
+            border-color: #555;
+        }
+
+        /* Input Icons */
+        .instagram-input {
+            background-image: url("https://cdn-icons-png.flaticon.com/512/174/174855.png");
+        }
+        .linkedin-input {
+            background-image: url("https://cdn-icons-png.flaticon.com/512/174/174857.png");
+        }
+        .youtube-input {
+            background-image: url("https://cdn-icons-png.flaticon.com/512/1384/1384060.png");
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background-color: #e23744;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #c82333;
+        }
+
+        /* Preview Section */
+        #previewSection {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        /* Preview Cards */
+        .preview-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 3px solid;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+        .platform-logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+        }
+        .platform-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .username {
+            color: #666;
+            margin-bottom: 20px;
+            word-break: break-word;
+        }
+
+        /* Platform-specific styles */
+        .instagram-card {
+            border-color: #e1306c;
+        }
+        .instagram-card .platform-name {
+            color: #e1306c;
+        }
+        .linkedin-card {
+            border-color: #0077b5;
+        }
+        .linkedin-card .platform-name {
+            color: #0077b5;
+        }
+        .youtube-card {
+            border-color: #ff0000;
+        }
+        .youtube-card .platform-name {
+            color: #ff0000;
+        }
+
+        /* Visit Button */
+        .visit-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+        .instagram-btn {
+            background-color: #e1306c;
+        }
+        .linkedin-btn {
+            background-color: #0077b5;
+        }
+        .youtube-btn {
+            background-color: #ff0000;
+        }
+        .visit-btn:hover {
+            opacity: 0.85;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            #previewSection {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Socialmedia Links</h1>
+        <!-- Form -->
+        <div class="form-box">
+            <form id="musicLinksForm">
+                <!-- Instagram -->
+                <div class="form-group">
+                    <label for="instagram">Instagram Profile URL</label>
+                    <input type="url" id="instagram" class="social-input instagram-input" placeholder="https://instagram.com/yourname" required>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn Profile URL</label>
+                    <input type="url" id="linkedin" class="social-input linkedin-input" placeholder="https://linkedin.com/in/yourname" required>
+                </div>
+
+                <!-- YouTube -->
+                <div class="form-group">
+                    <label for="youtube">YouTube Profile URL</label>
+                    <input type="url" id="youtube" class="social-input youtube-input" placeholder="https://youtube.com/@yourname" required>
+                </div>
+                <button type="submit" class="submit-btn">Add Social Links</button>
+            </form>
+        </div>
+
+        <!-- Preview Cards -->
+        <div id="previewSection"></div>
+    </div>
+    <script>
+        const form = document.getElementById("musicLinksForm");
+        const previewSection = document.getElementById("previewSection");
+
+        form.addEventListener("submit", function(event) {
+
+            // Stop page refresh
+            event.preventDefault();
+
+            // Get URLs
+            const instagramURL =
+                document.getElementById("instagram").value;
+
+            const linkedinURL =
+                document.getElementById("linkedin").value;
+
+            const youtubeURL =
+                document.getElementById("youtube").value;
+
+            // Extract username
+            function getUsername(url, platform) {
+                try {
+                    const urlObject = new URL(url);
+                    let path = urlObject.pathname
+                        .replace(/^\/+|\/+$/g, "");
+                    let username = path.split("/")[0];
+                    // Remove @ from YouTube handle
+                    if (platform === "YouTube") {
+                        username = username.replace("@", "");
+                    }
+                    return username || "User";
+                } catch (error) {
+                    return "User";
+                }
+            }
+            const instagramUser =
+                getUsername(instagramURL, "Instagram");
+            const linkedinUser =
+                getUsername(linkedinURL, "LinkedIn");
+            const youtubeUser =
+                getUsername(youtubeURL, "YouTube");
+
+            // Display cards
+            previewSection.innerHTML = `
+                <!-- Instagram Card -->
+                <div class="preview-card instagram-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" class="platform-logo" alt="Instagram">
+                    <div class="platform-name">Instagram</div>
+                    <p class="username">@${instagramUser}</p>
+                    <a href="${instagramURL}" target="_blank" rel="noopener noreferrer" class="visit-btn instagram-btn">
+                        Visit
+                    </a>
+                </div>
+
+                <!-- LinkedIn Card -->
+                <div class="preview-card linkedin-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="platform-logo" alt="LinkedIn">
+                    <div class="platform-name">LinkedIn</div>
+                    <p class="username">${linkedinUser}</p>
+                    <a href="${linkedinURL}" target="_blank" rel="noopener noreferrer" class="visit-btn linkedin-btn">
+                        Visit
+                    </a>
+                </div>
+
+                <!-- YouTube Card -->
+                <div class="preview-card youtube-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="platform-logo" alt="YouTube">
+                    <div class="platform-name">YouTube</div>
+                    <p class="username">@${youtubeUser}</p>
+                    <a href="${youtubeURL}" target="_blank" rel="noopener noreferrer" class="visit-btn youtube-btn">
+                        Visit
+                    </a>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>
