@@ -1,0 +1,26 @@
+Test A: All values identical
+
+Input: ten values of 5.
+Minimum: 5
+Maximum: 5
+Mean: 5.00
+Sorted values: 5 5 5 5 5 5 5 5 5 5
+Mean is exactly midway between them.
+
+Test B: Positive and negative values
+
+Input: -10 -5 -2 0 1 2 3 4 5 12
+Minimum: -10
+Maximum: 12
+Mean: 1.00
+Sorted values: -10 -5 -2 0 1 2 3 4 5 12
+Mean is closer to the maximum.
+
+Test C: Mean exactly midway between minimum and maximum
+
+Input: 0 0 0 0 5 5 10 10 10 10
+Minimum: 0
+Maximum: 10
+Mean: 5.00
+Sorted values: 0 0 0 0 5 5 10 10 10 10
+Mean is exactly midway between them.

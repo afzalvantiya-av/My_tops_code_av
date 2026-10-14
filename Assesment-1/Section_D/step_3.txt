@@ -1,0 +1,11 @@
+Que. 2  A 3–4 line note explaining what you changed and why the AI's original 
+        version needed the correction.
+
+
+Ans:-
+I tested the program with identical values, a mixture of positive and 
+negative integers, and a dataset where the mean was exactly midway 
+between the minimum and maximum. I checked the sorted order and 
+verified the calculations manually. I also added input validation so the 
+program stops if the user enters something other than an integer. 
+These checks help make the program more reliable.
