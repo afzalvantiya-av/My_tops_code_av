@@ -1,0 +1,11 @@
+3 Problems in Procedural C Solved by OOP TaskList
+
+1. Data Management: In C, task data and functions were separate, 
+making the program harder to manage. In OOP, classes combine data and methods in one place.
+
+2. Code Reusability: In C, I had to write separate functions to perform different task 
+operations. In OOP, I can reuse class methods to add, delete, and display tasks.
+
+3. Code Organization and Maintenance: In C, managing task lists and updating multiple 
+functions was difficult. In OOP, the TaskList class organizes all task-related operations 
+together, making the code easier to understand, update, and maintain.
